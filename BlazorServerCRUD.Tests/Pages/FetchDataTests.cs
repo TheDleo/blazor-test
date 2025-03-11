@@ -1,14 +1,14 @@
 using Bunit;
 using NUnit.Framework;
 using Moq;
-using BlazerServerCRUD.Web.Data;
-using BlazerServerCRUD.Web.Pages;
+using BlazorServerCRUD.Web.Data;
+using BlazorServerCRUD.Web.Pages;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Threading.Tasks;
 using AngleSharp.Dom;
 
-namespace BlazerServerCRUD.Tests.Pages;
+namespace BlazorServerCRUD.Tests.Pages;
 
 [TestFixture]
 public class FetchDataTests

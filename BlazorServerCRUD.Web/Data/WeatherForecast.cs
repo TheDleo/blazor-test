@@ -1,6 +1,6 @@
 using System;
 
-namespace BlazerServerCRUD.Web.Data
+namespace BlazorServerCRUD.Web.Data
 {
     public class WeatherForecast
     {

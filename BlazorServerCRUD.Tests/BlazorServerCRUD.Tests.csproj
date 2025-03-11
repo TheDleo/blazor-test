@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BlazerServerCRUD.Web\BlazerServerCRUD.Web.csproj" />
+    <ProjectReference Include="..\BlazorServerCRUD.Web\BlazorServerCRUD.Web.csproj" />
   </ItemGroup>
 
 </Project>

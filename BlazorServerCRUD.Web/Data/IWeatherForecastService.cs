@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace BlazerServerCRUD.Web.Data
+namespace BlazorServerCRUD.Web.Data
 {
     public interface IWeatherForecastService
     {
