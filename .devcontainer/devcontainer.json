@@ -1,0 +1,7 @@
+{
+    "name": "Blazor Development",
+    "dockerFile": "Dockerfile",
+    "forwardPorts": [5000, 5001],
+    "postCreateCommand": "dotnet restore",
+    "remoteUser": "vscode"
+}

@@ -23,7 +23,7 @@ public class WeatherForecastServiceTests
     public async Task GetForecastForCityAsync_Seattle_ReturnsValidForecast()
     {
         // Act
-        var forecast = await _service.GetForecastForCityAsync("Seattle", _testDate);
+        WeatherForecast forecast = await _service.GetForecastForCityAsync("Seattle", _testDate);
 
         // Assert
         Assert.Multiple(() =>
@@ -39,7 +39,7 @@ public class WeatherForecastServiceTests
     public async Task GetForecastForCityAsync_Phoenix_ReturnsValidForecast()
     {
         // Act
-        var forecast = await _service.GetForecastForCityAsync("Phoenix", _testDate);
+        WeatherForecast forecast = await _service.GetForecastForCityAsync("Phoenix", _testDate);
 
         // Assert
         Assert.Multiple(() =>
@@ -56,7 +56,7 @@ public class WeatherForecastServiceTests
     public void GetForecastForCityAsync_InvalidCity_ThrowsArgumentException(string city)
     {
         // Act & Assert
-        var ex = Assert.ThrowsAsync<ArgumentException>(
+        ArgumentException ex = Assert.ThrowsAsync<ArgumentException>(
             async () => await _service.GetForecastForCityAsync(city, _testDate));
         
         Assert.That(ex.Message, Does.Contain("City name cannot be empty"));
@@ -67,7 +67,7 @@ public class WeatherForecastServiceTests
     public void GetForecastForCityAsync_UnknownCity_ThrowsKeyNotFoundException()
     {
         // Act & Assert
-        var ex = Assert.ThrowsAsync<KeyNotFoundException>(
+        KeyNotFoundException ex = Assert.ThrowsAsync<KeyNotFoundException>(
             async () => await _service.GetForecastForCityAsync("NonExistentCity", _testDate));
         
         Assert.That(ex.Message, Does.Contain("Weather data not available for city"));
