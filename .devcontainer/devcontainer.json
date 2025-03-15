@@ -1,7 +1,10 @@
 {
     "name": "Blazor Development",
     "dockerFile": "Dockerfile",
-    "forwardPorts": [5000, 5001],
-    "postCreateCommand": "dotnet restore",
+    "forwardPorts": [
+        5000,
+        5001
+    ],
+    "postCreateCommand": "dotnet dev-certs https --trust && dotnet watch run --project BlazorServerCRUD.Web",
     "remoteUser": "vscode"
 }
